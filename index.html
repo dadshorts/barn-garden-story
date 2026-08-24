@@ -5,81 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Barn Garden — Juju</title>
 <style>
-  :root { --ink:#2c261e; --muted:#6e6458; --paper:#f3ecdf; --cream:#f6f0e4; --rule:#d9cfbf; --gold:#c4a574; }
+  :root { --ink:#2c261e; --muted:#6e6458; --cream:#f6f0e4; --rule:#d9cfbf; --gold:#c4a574; }
   * { box-sizing: border-box; }
-  body { margin:0; background:#e4d9c6; color:var(--ink); font: 18px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif; }
+  body { margin:0; background:#e4d9c6; color:var(--ink); font: 18px/1.55 Georgia,serif; }
   main { max-width: 740px; margin: 0 auto; background: var(--cream); min-height: 100vh; padding: 28px 28px 80px; }
-  h1 { font-size: 1.7rem; font-weight: 600; margin: .2rem 0 .3rem; }
-  .kicker { color: var(--muted); font-size: .9rem; letter-spacing: .04em; text-transform: uppercase; }
-  img.spread { width:100%; height:auto; display:block; border-radius: 2px; margin: 1rem 0 1.2rem; }
+  h1 { font-size: 1.7rem; font-weight: 600; }
+  img.spread { width:100%; height:auto; display:block; margin: 1rem 0 1.2rem; background:#efe4cc; }
   p { margin: .85rem 0; }
   button.w { font: inherit; color: inherit; background: transparent; border: none; border-bottom: 1px dotted #8a7354; cursor: pointer; padding: 0; }
-  button.w:hover, button.w.open { border-bottom-style: solid; color: #5a3f1e; }
-  .def { display:none; background:#fffdf8; border-left: 3px solid var(--gold); padding: .5rem .75rem; margin: .35rem 0 1rem; font-size: .95rem; color: var(--muted); }
+  .def { display:none; background:#fffdf8; border-left: 3px solid var(--gold); padding: .5rem .75rem; margin: .35rem 0 1rem; color:#6e6458; }
   .def.show { display:block; }
-  .play { background:#fffdf8; padding: 1rem 1.1rem; margin: 1.2rem 0; border: 1px solid var(--rule); }
-  .play h2 { font-size: 1.05rem; margin: 0 0 .6rem; }
-  .line { margin: .45rem 0; }
-  .who { font-weight: 600; font-size: .85rem; letter-spacing: .03em; color: var(--muted); }
-  .hint { font-size: .88rem; color: var(--muted); }
-  footer { margin-top: 2.5rem; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 1rem; }
+  .play { background:#fffdf8; padding: 1rem; margin: 1.2rem 0; border: 1px solid var(--rule); }
+  .hint { color:#6e6458; font-size: .9rem; }
 </style>
 </head>
 <body>
 <main>
-  <p class="kicker">A story for Juju · fifth grade</p>
+  <p class="hint">A story for Juju. Tap a dotted word.</p>
   <h1>The Barn Garden</h1>
-  <p class="hint">Tap a dotted word. It is the same word as on her sheets. No cards. Just the garden.</p>
-
-  <img class="spread" src="juju-garden.jpg" alt="A girl with a notebook in a late-afternoon garden">
-
-  <p>Juju walked to the little barn behind the house with a notebook. She wanted to <button class="w" data-id="research">research</button> how flowers grow in that bed. <span class="def" id="research">Research: to learn or study about a topic.</span></p>
-
-  <p>First she made an <button class="w" data-id="observation">observation</button> with her five senses: warm sun, wet dirt, the dog’s metal bowl, yellow petals. <span class="def" id="observation">Observation: the gathering of detailed information using the five senses.</span></p>
-
-  <p>Some of that was <button class="w" data-id="qualitative">qualitative</button> (how it looked and smelled). Some would be <button class="w" data-id="quantitative">quantitative</button> (how tall, how many days). <span class="def" id="qualitative">Qualitative: observations based off the 5 senses.</span><span class="def" id="quantitative">Quantitative: observations that are based on numbers.</span></p>
-
-  <p>A <button class="w" data-id="fact">fact</button> she already knew: plants need water. An <button class="w" data-id="opinion">opinion</button>: the yellow ones were the prettiest. <span class="def" id="fact">Fact: something that is true about a subject and can be supported with evidence.</span><span class="def" id="opinion">Opinion: a belief about something that may or may not be true.</span></p>
-
-  <img class="spread" src="juju-experiment.jpg" alt="Measuring flowers with a ruler and a timer">
-
-  <p>She wrote a <button class="w" data-id="hypothesis">hypothesis</button>: <em>If I give the left flowers more sun, then they will grow taller.</em> <span class="def" id="hypothesis">Hypothesis: an educated guess based on research that states what you think will happen in an experiment. Must be an “if…then” statement.</span></p>
-
-  <p>The <button class="w" data-id="iv">independent variable</button> was how much sun the left plants got. The <button class="w" data-id="dv">dependent variable</button> was their height. The water, the pots, and the soil were <button class="w" data-id="cv">control variables</button>. <span class="def" id="iv">Independent variable: the one variable that can be changed in an experiment. The one thing you are testing.</span><span class="def" id="dv">Dependent variable: the one variable that you are measuring in the experiment.</span><span class="def" id="cv">Control variable: all of the variables that must stay the same in an experiment. There can be several.</span></p>
-
-  <p><button class="w" data-id="materials">Materials</button>: ruler, timer, watering can, five pots. Then a <button class="w" data-id="procedure">procedure</button>, step by step. <span class="def" id="materials">Materials: a list of all supplies needed for the experiment.</span><span class="def" id="procedure">Procedure: a list of step by step procedures for carrying out an experiment.</span></p>
-
-  <p>Each day she put numbers in a <button class="w" data-id="table">data table</button>. Those numbers were <button class="w" data-id="data">data</button>. Later she would <button class="w" data-id="analyze">analyze</button> them. From the heights she made an <button class="w" data-id="inference">inference</button>: the sunnier side was winning. <span class="def" id="table">Data table: an organized way to record the measurable observations of an experiment.</span><span class="def" id="data">Data: the information collected in an experiment.</span><span class="def" id="analyze">Analyze: to break down information collected during an experiment.</span><span class="def" id="inference">Inference: drawing a reasonable conclusion about something based off observations.</span></p>
-
-  <img class="spread" src="juju-barn.jpg" alt="A wooden barn, a flower bed, and a cat on the step">
-
-  <p>On the barn wall someone had penciled <strong>The Barn</strong>. That is a <button class="w" data-id="noun">noun</button>, a place. The flowers grow. The dog ate his food. <span class="def" id="noun">Noun: person, place, thing. The flowers grow. The dog ate his food.</span></p>
-
+  <img class="spread" src="https://cdn.jsdelivr.net/gh/dadshorts/barn-garden-story@main/garden.svg" alt="Garden">
+  <p>Juju walked to the barn with a notebook. She wanted to <button class="w" data-id="research">research</button> how flowers grow. <span class="def" id="research">Research: to learn or study about a topic.</span></p>
+  <p>She made an <button class="w" data-id="observation">observation</button>. Some was <button class="w" data-id="qualitative">qualitative</button>, some <button class="w" data-id="quantitative">quantitative</button>. <span class="def" id="observation">Observation: using the five senses.</span><span class="def" id="qualitative">Qualitative: based off the 5 senses.</span><span class="def" id="quantitative">Quantitative: based on numbers.</span></p>
+  <p>A <button class="w" data-id="fact">fact</button>: plants need water. An <button class="w" data-id="opinion">opinion</button>: the yellow ones were prettiest. <span class="def" id="fact">Fact: true and supported with evidence.</span><span class="def" id="opinion">Opinion: a belief that may or may not be true.</span></p>
+  <img class="spread" src="https://cdn.jsdelivr.net/gh/dadshorts/barn-garden-story@main/experiment.svg" alt="Experiment">
+  <p><button class="w" data-id="hypothesis">Hypothesis</button>: If I give the left flowers more sun, then they will grow taller. <span class="def" id="hypothesis">Educated guess. Must be if...then.</span></p>
+  <p><button class="w" data-id="iv">Independent variable</button>: sun. <button class="w" data-id="dv">Dependent variable</button>: height. <button class="w" data-id="cv">Control variables</button>: water, pots, soil. <span class="def" id="iv">The one thing you are testing.</span><span class="def" id="dv">The one you measure.</span><span class="def" id="cv">Things that stay the same.</span></p>
+  <p><button class="w" data-id="materials">Materials</button> and a <button class="w" data-id="procedure">procedure</button>. Then a <button class="w" data-id="table">data table</button> of <button class="w" data-id="data">data</button>. <button class="w" data-id="analyze">Analyze</button> and make an <button class="w" data-id="inference">inference</button>. <span class="def" id="materials">Supplies.</span><span class="def" id="procedure">Step by step.</span><span class="def" id="table">Organized measurements.</span><span class="def" id="data">Information collected.</span><span class="def" id="analyze">Break it down.</span><span class="def" id="inference">A reasonable conclusion.</span></p>
+  <img class="spread" src="https://cdn.jsdelivr.net/gh/dadshorts/barn-garden-story@main/barn.svg" alt="Barn">
+  <p><strong>The Barn</strong> is a <button class="w" data-id="noun">noun</button>. <span class="def" id="noun">Person, place, thing.</span></p>
   <div class="play">
-    <h2>A tiny play by the barn door</h2>
-    <p class="hint">Read it out loud. The colored job of each word is the same as her Parts of Speech sheet.</p>
-    <p class="line"><span class="who">Juju</span> <button class="w" data-id="interjection">Hey!</button> I picked you some flowers! <span class="def" id="interjection">Interjection: excited word. Hey! Ouch!</span></p>
-    <p class="line"><span class="who">Cat</span> <button class="w" data-id="pronoun">She</button> loves <button class="w" data-id="pronoun2">her</button> family. <span class="def" id="pronoun">Pronoun: replaces noun. He planted flowers. She loves her family.</span><span class="def" id="pronoun2">Pronoun: replaces a noun. Here, her.</span></p>
-    <p class="line"><span class="who">Sun</span> He planted <button class="w" data-id="adj">beautiful</button> flowers. The sun is <button class="w" data-id="adj2">warm</button> and bright. <span class="def" id="adj">Adjective: describes noun.</span><span class="def" id="adj2">Adjective: warm, bright.</span></p>
-    <p class="line"><span class="who">Flowers</span> The flowers <button class="w" data-id="verb">grow</button>. The boy <button class="w" data-id="verb2">runs</button> and swims. <span class="def" id="verb">Verb: action word.</span><span class="def" id="verb2">Verb: runs, swims, grow.</span></p>
-    <p class="line"><span class="who">Garden</span> The flowers grow <button class="w" data-id="adverb">quickly</button>. The cat naps <button class="w" data-id="adverb2">quietly</button>. <span class="def" id="adverb">Adverb: describes action.</span><span class="def" id="adverb2">Adverb: quietly.</span></p>
-    <p class="line"><span class="who">Weeds</span> The flowers grow, <button class="w" data-id="conj">but</button> the weeds do not. I love pizza <button class="w" data-id="conj2">and</button> ice cream. <span class="def" id="conj">Conjunction: joining word.</span><span class="def" id="conj2">Conjunction: and.</span></p>
-    <p class="line"><span class="who">Sign</span> <button class="w" data-id="art">The</button> flowers grow. <button class="w" data-id="art2">A</button> dog lives in our house. <span class="def" id="art">Article: which one? words. The, a.</span><span class="def" id="art2">Article: a.</span></p>
-    <p class="line"><span class="who">Barn</span> The flowers grow <button class="w" data-id="prep">in</button> the garden. The sign is <button class="w" data-id="prep2">above</button> the door. <span class="def" id="prep">Preposition: location word. (She wrote “The Barn” by this one.)</span><span class="def" id="prep2">Preposition: above.</span></p>
-    <p class="line"><span class="who">Knee</span> <button class="w" data-id="ouch">Ouch!</button> I hurt my knee! <span class="def" id="ouch">Interjection: Ouch!</span></p>
+    <p><button class="w" data-id="interjection">Hey!</button> <button class="w" data-id="pronoun">She</button> planted <button class="w" data-id="adj">beautiful</button> flowers. They <button class="w" data-id="verb">grow</button> <button class="w" data-id="adverb">quickly</button>, <button class="w" data-id="conj">but</button> the weeds do not. <button class="w" data-id="art">The</button> flowers grow <button class="w" data-id="prep">in</button> the garden. <button class="w" data-id="ouch">Ouch!</button></p>
+    <span class="def" id="interjection">Excited word.</span>
+    <span class="def" id="pronoun">Replaces a noun.</span>
+    <span class="def" id="adj">Describes a noun.</span>
+    <span class="def" id="verb">Action word.</span>
+    <span class="def" id="adverb">Describes action.</span>
+    <span class="def" id="conj">Joining word.</span>
+    <span class="def" id="art">Which one? The, a.</span>
+    <span class="def" id="prep">Location word.</span>
+    <span class="def" id="ouch">Excited word.</span>
   </div>
-
-  <p>When the play was done, Juju closed the notebook. The experiment was still growing. The words were already in the garden.</p>
-
-  <footer>From Juju’s two sheets (Scientific Method Vocab + Parts of Speech), photos sent Aug 23, 2026. Words match the paper. No quiz date was on the sheets. Maps guide is still pip-maps.html.</footer>
 </main>
 <script>
 document.querySelectorAll("button.w").forEach(function(b){
   b.addEventListener("click", function(){
     var el = document.getElementById(b.getAttribute("data-id"));
-    if (!el) return;
-    var on = el.classList.toggle("show");
-    b.classList.toggle("open", on);
+    if (el) el.classList.toggle("show");
   });
 });
 </script>
