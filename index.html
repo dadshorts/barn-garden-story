@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Barn Garden</title>
+<style>
+  :root { --ink:#2c261e; --muted:#6e6458; --cream:#f6f0e4; --rule:#d9cfbf; --gold:#c4a574; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#e4d9c6; color:var(--ink); font: 18px/1.55 Georgia,serif; }
+  main { max-width: 740px; margin: 0 auto; background: var(--cream); min-height: 100vh; padding: 28px 28px 80px; }
+  h1 { font-size: 1.7rem; font-weight: 600; margin: .2rem 0 .3rem; }
+  .kicker { color: var(--muted); font-size: .9rem; letter-spacing: .04em; text-transform: uppercase; }
+  img.spread { width:100%; height:auto; display:block; margin: 1rem 0 1.2rem; }
+  p { margin: .85rem 0; }
+  button.w { font: inherit; color: inherit; background: transparent; border: none; border-bottom: 1px dotted #8a7354; cursor: pointer; padding: 0; }
+  .def { display:none; background:#fffdf8; border-left: 3px solid var(--gold); padding: .5rem .75rem; margin: .35rem 0 1rem; font-size: .95rem; color: var(--muted); }
+  .def.show { display:block; }
+  .play { background:#fffdf8; padding: 1rem 1.1rem; margin: 1.2rem 0; border: 1px solid var(--rule); }
+  .hint { font-size: .88rem; color: var(--muted); }
+  footer { margin-top: 2.5rem; font-size: .82rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <p class="kicker">A story for Juju</p>
+  <h1>The Barn Garden</h1>
+  <p class="hint">Tap a dotted word.</p>
+  <img class="spread" src="juju-garden.jpg" alt="Garden">
+  <p>Juju walked to the barn with a notebook. She wanted to <button class="w" data-id="research">research</button> how flowers grow. <span class="def" id="research">Research: to learn or study about a topic.</span></p>
+  <p>She made an <button class="w" data-id="observation">observation</button>. <span class="def" id="observation">Observation: gathering detailed information using the five senses.</span></p>
+  <p>Some was <button class="w" data-id="qualitative">qualitative</button>. Some was <button class="w" data-id="quantitative">quantitative</button>. <span class="def" id="qualitative">Qualitative: based off the 5 senses.</span><span class="def" id="quantitative">Quantitative: based on numbers.</span></p>
+  <p>A <button class="w" data-id="fact">fact</button>: plants need water. An <button class="w" data-id="opinion">opinion</button>: the yellow ones were prettiest. <span class="def" id="fact">Fact: true and supported with evidence.</span><span class="def" id="opinion">Opinion: a belief that may or may not be true.</span></p>
+  <img class="spread" src="juju-experiment.jpg" alt="Experiment">
+  <p><button class="w" data-id="hypothesis">Hypothesis</button>: If I give the left flowers more sun, then they will grow taller. <span class="def" id="hypothesis">Hypothesis: educated guess. Must be an if...then statement.</span></p>
+  <p><button class="w" data-id="iv">Independent variable</button>: sun. <button class="w" data-id="dv">Dependent variable</button>: height. <button class="w" data-id="cv">Control variables</button>: water, pots, soil. <span class="def" id="iv">The one thing you are testing.</span><span class="def" id="dv">The one you are measuring.</span><span class="def" id="cv">Things that must stay the same.</span></p>
+  <p><button class="w" data-id="materials">Materials</button> and a <button class="w" data-id="procedure">procedure</button>. <span class="def" id="materials">Supplies needed.</span><span class="def" id="procedure">Step by step.</span></p>
+  <p>Numbers go in a <button class="w" data-id="table">data table</button>. That is <button class="w" data-id="data">data</button>. Then <button class="w" data-id="analyze">analyze</button> and make an <button class="w" data-id="inference">inference</button>. <span class="def" id="table">Organized way to record measurements.</span><span class="def" id="data">Information collected.</span><span class="def" id="analyze">Break down information.</span><span class="def" id="inference">A reasonable conclusion from observations.</span></p>
+  <img class="spread" src="juju-barn.jpg" alt="Barn">
+  <p><strong>The Barn</strong> is a <button class="w" data-id="noun">noun</button>. <span class="def" id="noun">Person, place, thing.</span></p>
+  <div class="play">
+    <p><button class="w" data-id="interjection">Hey!</button> <button class="w" data-id="pronoun">She</button> planted <button class="w" data-id="adj">beautiful</button> flowers. They <button class="w" data-id="verb">grow</button> <button class="w" data-id="adverb">quickly</button>, <button class="w" data-id="conj">but</button> the weeds do not. <button class="w" data-id="art">The</button> flowers grow <button class="w" data-id="prep">in</button> the garden. <button class="w" data-id="ouch">Ouch!</button></p>
+    <span class="def" id="interjection">Excited word.</span>
+    <span class="def" id="pronoun">Replaces a noun.</span>
+    <span class="def" id="adj">Describes a noun.</span>
+    <span class="def" id="verb">Action word.</span>
+    <span class="def" id="adverb">Describes action.</span>
+    <span class="def" id="conj">Joining word.</span>
+    <span class="def" id="art">Which one? The, a.</span>
+    <span class="def" id="prep">Location word. She wrote The Barn by this one.</span>
+    <span class="def" id="ouch">Excited word.</span>
+  </div>
+  <footer>Words match her two sheets. Tap a dotted word.</footer>
+</main>
+<script>
+document.querySelectorAll("button.w").forEach(function(b){
+  b.addEventListener("click", function(){
+    var el = document.getElementById(b.getAttribute("data-id"));
+    if (!el) return;
+    el.classList.toggle("show");
+  });
+});
+</script>
+</body>
+</html>
